@@ -1,0 +1,21 @@
+plugins {
+    id 'com.rs.retrofit.playground.java-application-conventions'
+}
+
+dependencies {
+    // Bring in our client
+    implementation project(':example-client')
+
+    // And retrofit libraries (Which also bring in Okhttp!
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-scalars:${retrofitVersion}"
+}
+
+application {
+    mainClass = 'com.rs.retrofit.playground.app.App'
+}
+
+// We want to get user input from the command line
+run {
+    standardInput = System.in
+}

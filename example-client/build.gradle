@@ -1,0 +1,13 @@
+plugins {
+    id 'com.rs.retrofit.playground.java-library-conventions'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // This could easily be defined on the api classpath since in the app module I'll be referencing retrofit classes directly
+    // But I'm just going to define it there since I'm not designing this class to be a "retrofit common" class :)
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+}

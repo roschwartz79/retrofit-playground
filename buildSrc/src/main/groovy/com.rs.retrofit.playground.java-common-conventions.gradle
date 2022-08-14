@@ -1,0 +1,22 @@
+plugins {
+    // Apply the java and groovy Plugin to add support for Java and Groovy.
+    id 'java'
+    id 'groovy'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    constraints {
+        // Define dependency versions as constraints
+        implementation 'org.apache.commons:commons-text:1.9'
+    }
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
